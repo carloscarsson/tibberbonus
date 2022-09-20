@@ -1,3 +1,52 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background: #f0f0f2;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+a {
+  color: #75CDDB;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid #eee;
+}
+
+a:hover {
+  border-color: #75CDDB;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  background: #fff;
+  padding: 20px 20%;
+}
+
+section {
+  padding: 20px 20%;
+  background: #fff;
+}
+
+section.grey {
+  background: #f0f0f2;
+  color: #000;
+}
+
+section.dark {
+  background: #000323;
+  color: #fff;
+}
+
+section.hero p {
+  font-size: 24px;
 }
