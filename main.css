@@ -9,14 +9,18 @@ h1 {
   font-size: 48px;
 }
 
+h1 > span {
+  text-decoration: underline;
+}
+
 a {
-  color: #75CDDB;
-  font-weight: bold;
+  color: #000323;
   text-decoration: none;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid #888;
 }
 
 a:hover {
+  color: #000323;
   border-color: #75CDDB;
 }
 
@@ -29,12 +33,33 @@ main {
 header {
   display: flex;
   background: #fff;
-  padding: 20px 20%;
+  padding: 20px 15%;
 }
 
 section {
-  padding: 20px 20%;
+  padding: 20px 15%;
   background: #fff;
+}
+
+section.two-col {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+section > .left, section .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(max-width: 768px) {
+  section.two-col {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 section.grey {
@@ -49,4 +74,40 @@ section.dark {
 
 section.hero p {
   font-size: 24px;
+  font-weight: 300;
+}
+
+.button {
+  background: #23B8CC;
+  color: #fff;
+  display: inline-block;
+  align-self: flex-start;
+  padding: 20px 30px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 20px 0;
+  transition: background 0.1s ease-in-out;
+}
+
+.button:hover {
+  color: #fff;
+  background: #1b8b9a;
+}
+
+.code {
+  background: #000323;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+:selection {
+  color: #000;
+  background: #23B8CC;
 }
