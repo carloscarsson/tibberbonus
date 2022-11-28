@@ -1,8 +1,8 @@
 body {
+  background: #f0f0f2;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   margin: 0;
-  background: #f0f0f2;
 }
 
 h1 {
@@ -11,6 +11,20 @@ h1 {
 
 h1 > span {
   text-decoration: underline;
+}
+
+h3.small  {
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+h3.small + h2  {
+  margin-top: 0;
+}
+
+p {
+  font-size: 18px;
 }
 
 a {
@@ -23,8 +37,8 @@ a.underline {
 }
 
 a:hover {
-  color: #000323;
   border-color: #75CDDB;
+  color: #000323;
 }
 
 main {
@@ -34,14 +48,14 @@ main {
 }
 
 header {
-  display: flex;
   background: #fff;
+  display: flex;
   padding: 20px 20%;
 }
 
 section {
-  padding: 20px 20%;
   background: #fff;
+  padding: 20px 20%;
 }
 
 section.two-col {
@@ -55,7 +69,6 @@ section > .left, section .right {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 section.grey {
@@ -74,22 +87,24 @@ section.hero p {
 }
 
 .button {
-  background: #23B8CC;
-  color: #fff;
-  display: inline-block;
   align-self: flex-start;
-  padding: 20px 30px;
-  border-radius: 5px;
+  background: #23B8CC;
   border: none;
+  border-radius: 5px;
+  color: #fff;
   font-size: 16px;
   font-weight: 500;
   margin: 20px 0;
+  padding: 20px 30px;
   transition: background 0.1s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .button:hover {
-  color: #fff;
   background: #1b8b9a;
+  color: #fff;
 }
 
 .code-wrapper {
@@ -99,67 +114,80 @@ section.hero p {
 
 .code {
   background: #000323;
+  border: none;
+  border-radius: 5px;
   color: #fff;
   display: inline-block;
-  padding: 10px 15px;
-  border-radius: 5px;
-  border: none;
   font-size: 16px;
   font-weight: 500;
+  padding: 10px 15px;
 }
 
 .code-wrapper a {
-  color: #fff;
-  background-color: #23B8CC;
-  display: flex;
   align-items: center;
+  background-color: #23B8CC;
   border-radius: 10px;
-  margin-left: 10px;
-  width: 40px;
+  color: #fff;
+  display: flex;
   height: 40px;
   justify-content: center;
+  margin-left: 10px;
+  width: 40px;
 }
 
 :selection {
-  color: #000;
   background: #23B8CC;
+  color: #000;
 }
 
 .input {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
   display: flex;
   flex-direction: row;
-  background-color: #fff;
-  padding: 5px;
-  border-radius: 15px;
-  justify-content: space-between;
-  align-items: center;
   gap: 10px;
+  justify-content: space-between;
+  margin: 32px 0 16px;
+  padding: 5px;
 }
 
 .input > svg {
-  margin-left: 20px;
-  margin-right: 20px;
   color: #888;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.input .divider {
+  background: #f0f0f2;
+  display: block;
+  height: 44px;
+  width: 3px;
 }
 
 .input a.link {
-  flex: 1;
   color: #888;
-  text-decoration: underline;
+  flex: 1;
   padding: 10px 15px;
+  text-decoration: underline;
 }
 
 .input .input-button {
+  align-items: center;
   background: #23B8CC;
+  border: none;
+  border-radius: 10px;
   color: #fff;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 10px;
-  padding: 10px 15px;
-  border: none;
   font-size: 16px;
   font-weight: 500;
+  gap: 10px;
+  justify-content: space-around;
+  padding: 10px 15px;
+}
+
+.app-buttons {
+  display: flex;
   gap: 10px;
 }
 
