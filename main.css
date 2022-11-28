@@ -16,6 +16,9 @@ h1 > span {
 a {
   color: #000323;
   text-decoration: none;
+}
+
+a.underline {
   border-bottom: 2px solid #888;
 }
 
@@ -55,13 +58,6 @@ section > .left, section .right {
   align-items: center;
 }
 
-@media(max-width: 768px) {
-  section.two-col {
-    flex-direction: column;
-    gap: 0;
-  }
-}
-
 section.grey {
   background: #f0f0f2;
   color: #000;
@@ -96,6 +92,11 @@ section.hero p {
   background: #1b8b9a;
 }
 
+.code-wrapper {
+  display: flex;
+  margin-top: 10px;
+}
+
 .code {
   background: #000323;
   color: #fff;
@@ -107,7 +108,74 @@ section.hero p {
   font-weight: 500;
 }
 
+.code-wrapper a {
+  color: #fff;
+  background-color: #23B8CC;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+}
+
 :selection {
   color: #000;
   background: #23B8CC;
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 15px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.input > svg {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #888;
+}
+
+.input a.link {
+  flex: 1;
+  color: #888;
+  text-decoration: underline;
+  padding: 10px 15px;
+}
+
+.input .input-button {
+  background: #23B8CC;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 10px;
+}
+
+@media(max-width: 768px) {
+  section.two-col {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .input .input-button {
+    display: none;
+  }
+}
+
+@media(max-width: 1024px) {
+  section, header {
+    padding: 20px 5%;
+  }
 }

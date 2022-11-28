@@ -39,6 +39,7 @@
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -61,30 +62,98 @@
           Testa och byt till Tibber via länken nedan så får du 500kr som bonus
           att använda i Tibber Store. ⚡️
         </p>
-        <a href="https://tibber.com/se/invite/3o9d04o0" class="button"
-          >Till koden 3o9d04o0</a
+        <a
+          href="https://tibber.com/se/invite/3o9d04o0"
+          target="_blank"
+          class="button"
+          >Till Tibber med 500kr</a
         >
       </section>
-      <section class="two-col">
-        <div class="left">
-          <p>Rabattkoden: <b class="code">3o9d04o0</b></p>
-        </div>
-        <div class="right">
-          <p>
-            Länk:
-            <a href="https://invite.tibber.com/3o9d04o0"
-              >https://invite.tibber.com/3o9d04o0</a
-            >
-          </p>
-        </div>
-      </section>
       <section class="grey">
+        <p>
+          <span class="input"
+            ><i data-feather="link-2"></i
+            ><a
+              href="https://invite.tibber.com/3o9d04o0"
+              target="_blank"
+              class="link copy-link"
+              >https://invite.tibber.com/3o9d04o0</a
+            ><a class="input-button" href="#">
+              <i data-feather="copy"></i>Kopiera länk
+            </a></span
+          >
+        </p>
+      </section>
+      <section>
         <h2>Registrera i efterhand</h2>
         <p>
           Det går också bra att <em>registrera bonuskoden i efterhand</em> via
           appen för att erhålla bonusen på <b>500kr</b>.
         </p>
+        <p>
+          <span class="code-wrapper">
+            <b class="code">3o9d04o0</b>
+            <a href="#" class="copy-code">
+              <i data-feather="copy"></i>
+            </a>
+          </span>
+        </p>
       </section>
     </main>
+    <script>
+      feather.replace();
+    </script>
+    <script>
+      function fallbackCopyTextToClipboard(text) {
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+
+        // Avoid scrolling to bottom
+        textArea.style.top = "0";
+        textArea.style.left = "0";
+        textArea.style.position = "fixed";
+
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+
+        try {
+          var successful = document.execCommand("copy");
+          var msg = successful ? "successful" : "unsuccessful";
+          console.log("Fallback: Copying text command was " + msg);
+        } catch (err) {
+          console.error("Fallback: Oops, unable to copy", err);
+        }
+
+        document.body.removeChild(textArea);
+      }
+      function copyTextToClipboard(text) {
+        if (!navigator.clipboard) {
+          fallbackCopyTextToClipboard(text);
+          return;
+        }
+        navigator.clipboard.writeText(text).then(
+          function () {
+            console.log("Async: Copying to clipboard was successful!");
+          },
+          function (err) {
+            console.error("Async: Could not copy text: ", err);
+          }
+        );
+      }
+
+      var copyLinkBtn = document.querySelector(".copy-link");
+      var copyCodeBtn = document.querySelector(".copy-code");
+
+      copyLinkBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        copyTextToClipboard("https://tibber.com/se/invite/3o9d04o0");
+      });
+
+      copyCodeBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        copyTextToClipboard("3o9d04o0");
+      });
+    </script>
   </body>
 </html>
